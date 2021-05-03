@@ -26,22 +26,21 @@ parse_args() {
 ARGS=$@
 if [ $# -eq 0 ]; then
 	echo "No arguments passed"
-	show_help
+	echo "Try to run $0 --help"
 else
-while [ $# -gt 0 ]; do
-	# TODO: Parse arguments
-	case "$ARGS" in
-		--help|-h)
-			show_help
-			;;
-		*)
-			check_input_output $@
-			shift
-			;;
-	esac
-	echo "$# $@" # debugging only
-	shift
-done
+	while [ $# -gt 0 ]; do
+		# TODO: Parse arguments
+		case "$ARGS" in
+			--help|-h)
+				show_help
+				;;
+			*)
+				check_input_output $@
+				shift
+				;;
+		esac
+		shift
+	done
 fi
 }
 
