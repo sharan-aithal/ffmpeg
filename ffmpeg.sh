@@ -1,11 +1,24 @@
 #!/usr/bin/env bash
-
 # call ffmpeg by passing command line arguments
 
+show_help() {
+# TODO: Print help message
+echo "Usage: $0 "
+}
+
 parse_args() {
+ARGS=$@
 while [ $# -gt 0 ]; do
 	# TODO: Parse arguments
-	echo "$@"
+	case "$ARGS" in
+		--help|-h)
+			show_help
+			;;
+		*)
+			echo "Invalid option"
+			;;
+	esac
+	echo "$# $@" # debugging only
 	shift
 done
 }
