@@ -5,8 +5,10 @@ show_help() {
 # TODO: Print help message
 cat <<- EOF
 Usage: $0 [-h|--help] <input-file> <output-file>
-	<input-file>	is required and used to convert media to given output-file
-	<output-file>	is required to save output media.
+    <input-file>	is required and used to convert media to given output-file
+    <output-file>	is required to save output media.
+Flags:
+    -h, --help	Get this help message
 EOF
 }
 
