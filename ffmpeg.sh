@@ -3,7 +3,11 @@
 
 show_help() {
 # TODO: Print help message
-echo "Usage: $0 "
+cat <<- EOF
+Usage: $0 [-h|--help] <input-file> <output-file>
+	<input-file>	is required and used to convert media to given output-file
+	<output-file>	is required to save output media.
+EOF
 }
 
 do_ffmpeg() {
